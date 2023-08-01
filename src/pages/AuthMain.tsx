@@ -22,7 +22,7 @@ const AuthMain: React.FC = () => {
       <Content style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <div>
           <Logo>HBD</Logo>
-          {isLogin ? <LoginForm /> : <SignupForm />}
+          {isLogin ? <LoginForm /> : <SignupForm setIsLogin={setIsLogin}/>}
           <Button type="link" onClick={isLogin ? handleGoToSignup : handleGoToLogin}>
             {isLogin ? '회원가입으로 이동' : '로그인으로 이동'}
           </Button>

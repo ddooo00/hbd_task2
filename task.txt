@@ -1,0 +1,14 @@
+1. 회원가입 기능 구현
+    - handleSignup의 any 제거
+    - 회원가입 실패 시, alert(try~catch / then catch)
+    - 성공 시, 로그인 화면으로(setState를 내려줘야해)
+    - 이미 존재하는 아이디면 "이미 존재한다"알려주기
+2. 로그인 기능
+    - 토큰 또는 이메일이 
+3. 로그인 완료 시
+    - alert
+    - shortId로 임시 token 생성하여 setItem
+    - 로그인한 이메일을 token에 저장
+4. AuthLayout.tsx
+    - 로그인 된 유저만 이용할 수 있는 페이지
+    - 토큰 또는 email이 없는 경우 navigate로 메인 페이지 이동
