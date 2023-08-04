@@ -1,3 +1,39 @@
+1. 패키지 설치(yarn, npm)
+2. 프로젝트 구조 설명
+
+
+[Tasks]
+1. Router 연결하기(App.tsx)
+2. AuthMain 완성
+    - handleGoToLogin
+    - handleGoToSignup
+2. 회원가입 기능 완성(SignupForm)
+    - 오늘은 any를 가만히 놔둠
+    - 성공 시
+        > "회원가입이 성공적으로 처리되었습니다. 로그인 페이지로 이동합니다."
+        > 로그인 화면으로(AuthMain에서 SignupForm으로 setState를 내려줘야해)
+    - 이미 존재하는 아이디면 "이미 존재한다"
+    - 네트워크 등 기타 문제로 회원가입 실패 시, "처리중 오류가 발생하였습니다. 다시 시도해주세요."
+3. 로그인 기능 완성(LoginForm)
+    - email과 password를 DB에서 찾아서 로그인 검증
+    - 실패 시, alert
+    - 성공 시
+        > "로그인에 성공하였습니다. 메인 페이지로 이동합니다."
+        > localStorage에 token과 email을 저장
+        > token은 shortId로 생성
+        > "/" 라우터로 이동
+4. AuthLayout 완성
+    - 토큰 또는 이메일이 없는 경우
+        > "토큰 또는 이메일이 없습니다. 로그인해주세요."
+        > localStorage에 있는 token, email을 제거
+        > /auth로 navigate
+    - 로그아웃 버튼
+        > 선택 시, "로그아웃하시겠습니까?" 및 confirm 처리
+        > yes 선택 시, localStorage에 있는 token, email을 제거
+        > "로그아웃이 완료되었습니다. 로그인 페이지로 이동합니다."
+        > navigate
+
+
 1. 회원가입 기능 구현
     - handleSignup의 any 제거
     - 회원가입 실패 시, alert(try~catch / then catch)

@@ -39,6 +39,11 @@
       "email": "asdf",
       "password": "123",
       "id": 8
+    },
+    {
+      "email": "testtest@gmail.com",
+      "password": "1234",
+      "id": 9
     }
   ],
   "boards": [
